@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <meta http-equiv="CONTENT-TYPE" content="text/html; charset=UTF-8">
+  <title>hairstyle picker</title>
+  <link rel="stylesheet" href="hair.css">
+</head>
+<body>
+  <h1>
+    Try this hairstyle!
+  </h1>
+  <div class="parent">
+    <div id="hairtype" style="border-bottom-style:solid" class="child">
+      <label class="headers"><b><em>Hair type</em></b></label><br>
+      <input type="radio" id="h1" name="hairtype">
+      <label for="h1">4A</label><br>
+      <input type="radio" id="h2" name="hairtype">
+      <label for="h2">4B</label><br>
+      <input type="radio" id="h3" name="hairtype">
+      <label for="h3">4C</label><br>
+    </div>
+    <div id="length" style="border-bottom-style:solid" class="child">
+      <label class="headers"><em><b>Hair Length</b></em></label><br>
+      <input type="radio" id="l1" name="length">
+      <label for="l1">TWA</label><br>
+      <input type="radio" id="l2" name="length">
+      <label for="l2">Shoulder Length</label><br>
+      <input type="radio" id="l3" name="length">
+      <label for="l3">Midback Length</label><br>
+      <input type="radio" id="l4" name="length">
+      <label for="l4">Waist Length</label><br>
+    </div>
+    <div id="frequency" style="border-bottom-style:solid" class="child">
+      <label class="headers"><b><em>Styling Frequency</em></b></label><br>
+      <input type="radio" id="f1" name="frequency">
+      <label for="f1">Biweekly</label><br>
+      <input type="radio" id="f2" name="frequency">
+      <label for="f2">Weekly</label><br>
+      <input type="radio" id="f3" name="frequency">
+      <label for="f3">Bimonthly</label><br>
+      <input type="radio" id="f4" name="frequency">
+      <label for="f4">Monthly</label><br>
+    </div>
+    <button class="button" id="btn">Submit</button>
+  </div>
+    
+  
+  <p id="ht"></p>
+  <p id="hl"></p>
+  <p id="sf"></p>
+  <button id="style" onclick="change()">Click for Style</button><br>
+  <img src="Hairstles/0.gif" id="pic" class="responsive">
+  <script src="hair.js"></script>
+</body>
+</html>
