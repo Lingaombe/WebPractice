@@ -1,0 +1,45 @@
+.side{
+    display: none;
+    position: fixed;
+    right: 0;
+    z-index: 999;
+    top: 0;
+    flex-direction: column;
+    backdrop-filter: blur(10px);
+    height: 70vh;
+    align-items: flex-start;
+    font-size: 1.5rem;
+}
+.side li{
+    width: 50vw;
+    display: flex;
+    align-items: flex-start;
+}
+
+@media(max-width: 600px){
+    .hide{
+        display: none;
+    }
+}
+@media(min-width: 600px){
+    .hidden{
+        display: none;
+    }
+}
+
+.aboutt{
+    display: grid;
+    grid-template-columns: 32% 32% 32%;
+    justify-content: space-evenly;
+    min-height: 60vh
+}
+.about{
+    border: 2px outset;
+    border-radius: 20px;
+    align-items: center;
+    text-align: center;
+}
+.aboutt button{
+    padding: 2%;
+    margin: 10%;
+}

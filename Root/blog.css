@@ -1,0 +1,24 @@
+.articles{
+    display: grid;
+    grid-template-columns: 40% 50%;
+    gap: 5%;
+    min-width: 100vw;
+}
+.articles img{
+    min-width: 40vw;
+    max-width: 40vw;
+    max-height: auto;
+}
+.rows{
+    display: grid;
+    grid-template-columns: 32vw 32vw 32vw;
+    justify-content: space-around;
+    text-align: center;
+    gap: 2%;
+    margin-bottom: 5%;
+}
+.row img{
+    max-width: 30vw;
+    height: 20vh;
+    align-items: center;
+}

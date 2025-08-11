@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>
+        Root
+    </title>
+    <style>
+        body{
+    padding-top: 90px;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+:root{
+    font-family: 'Times New Roman';
+    font-style: italic;
+    font-stretch: expanded;
+    font-size: 1.2rem;
+}
+:root a{
+    text-decoration: none;
+    color: orangered
+}
+.nav{
+    display: flex;
+    flex-flow: wrap;
+    align-items: center;
+    justify-content: space-between;
+    top: 0;
+    position: fixed;
+    backdrop-filter: blur(8px);
+    width: 100%;
+    z-index: 999;
+    max-width: 98vw;
+}
+.pageheader ul{
+    display: flex;
+    gap: 10%;
+    justify-content: space-around;
+    text-align: center;
+    min-width: 10%;
+    list-style-type: none;
+}
+button{
+    padding: 0.7%;
+    border-radius: 30px;
+    background-color: orange;
+    font-family: 'Bodoni MT';
+    font-style: oblique;
+    font-weight: lighter;
+    font-size: 1rem;
+    transition: background-color 1s ease;
+    border: transparent;
+}
+button:hover{
+    cursor: pointer;
+    background-color: orangered;    
+}
+.pagemain{
+    flex-grow: 1;
+}
+.condos{
+    display: flex;
+    justify-content: space-around;
+    gap: 3%;
+}
+.condos img{
+    max-width: 20vw;
+    max-height: 20vh;
+    border-radius: .5rem;
+}
+.hero{
+    display: grid;
+    grid-template-columns: 50% 45%;
+    align-items: center;
+    justify-content: space-around;
+}
+.hero img{
+    max-width: 45vw;
+    min-height: 30vw;
+    border-radius: 8px;
+}
+.condos img:hover{
+    animation: transform 1s ease-in-out;
+    transition: box-shadow .6s ease;
+    transform: scale3d(1.1,1.1,1.1);
+    box-shadow: .2vh .2vh rgb(255, 202, 30);
+    cursor: pointer;
+}
+@keyframes transform{
+    from{transform: scale3d(1,1,1);}
+    to{transform: scale3d(1.1,1.1,1.1);}
+}
+
+h1{
+    font-style: oblique;
+    font-size: 2rem;
+    text-align: center;
+}
+.up{
+    display: flex;
+    gap: 5%;
+    flex-flow: wrap;
+    justify-content: space-evenly;
+}
+.in{
+    text-align: left;
+}
+.down{
+    display: grid;
+    grid-template-columns: 30% 33% 35%;
+    text-align: center;
+}
+footer{
+    background-image: url("ll.jpg");
+    background-size: cover;
+    color: orangered;
+    width: 100%;
+}
+.dw{
+    text-align: center;
+}
+.in li:hover{
+    cursor: pointer;
+}
+.scroll{
+    display: flex;
+    max-width: 500px;
+    min-height: 150px;
+    gap: 40px;
+    overflow: hidden;
+    padding: 20px;
+    position: relative;
+    margin: auto;
+    mask-image: linear-gradient(
+        to left,
+        rgba(0,0,0,0),
+        rgba(0,0,0,1) 20%,
+        rgba(0,0,0,1) 80%,
+        rgba(0,0,0,0)
+    );
+}
+@keyframes scroll-left{
+    to{
+        left: -150px;
+    }
+}
+.scroll .reviews{
+    max-width: 150px;
+    margin: auto;
+    position: absolute;
+    left: max(calc(100px * 8), 100%);
+    animation-name: scroll-left;
+    animation-duration: 30s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+#reviews{
+    max-width: 150px;
+    max-height: 85px;
+}
+.reviews2{
+    animation-delay: calc(20s / 20 * (20 - 5) * -1);
+}
+.reviews3{
+    animation-delay: calc(20s / 20 * (20 - 10) * (-1));
+}
+.reviews4{
+    animation-delay: calc(20s / 20 * (20 - 15) * (-1));
+}
+.reviews5{
+    animation-delay: calc(20s / 20 * (20 - 20) * (-1));
+}
+.reviews6{
+    animation-delay: calc(20s / 20 * (20 - 25) * (-1));
+}
+.reviews7{
+    animation-delay: calc(20s / 20 * (20) * (-1));
+}
+.side{
+    display: none;
+    position: fixed;
+    right: 0;
+    z-index: 999;
+    top: 0;
+    flex-direction: column;
+    backdrop-filter: blur(10px);
+    height: 70vh;
+    align-items: flex-start;
+    font-size: 1.5rem;
+}
+.side li{
+    width: 50vw;
+    display: flex;
+    align-items: flex-start;
+}
+
+@media(max-width: 600px){
+    .hide{
+        display: none;
+    }
+}
+@media(min-width: 600px){
+    .hidden{
+        display: none;
+    }
+}
+    </style>
+  </head>
+  <body>
+
+    <header class="pageheader">
+        <div>
+            <div class="nav">
+                <h2 style="color:orangered; font-size: 1.3rem; cursor: pointer; font-family: 'Bodoni MT';" id="mode">ROOT</h2>
+                <ul>
+                    <a href = "index.html" class="hide"><li>Home</li></a>
+                    <a href = "about.html" class="hide"><li>About</li></a>
+                    <a href = "shop.html" class="hide"><li>Shop</li></a>
+                    <a href = "blog.html" class="hide"><li>Blog</li></a>
+                </ul>
+                <a href = "#"><li style="list-style-type: none;" id="open" class="hidden"><svg fill="#FD7E14" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 72 72" width="30px" height="30px"><path d="M56 48c2.209 0 4 1.791 4 4 0 2.209-1.791 4-4 4-1.202 0-38.798 0-40 0-2.209 0-4-1.791-4-4 0-2.209 1.791-4 4-4C17.202 48 54.798 48 56 48zM56 32c2.209 0 4 1.791 4 4 0 2.209-1.791 4-4 4-1.202 0-38.798 0-40 0-2.209 0-4-1.791-4-4 0-2.209 1.791-4 4-4C17.202 32 54.798 32 56 32zM56 16c2.209 0 4 1.791 4 4 0 2.209-1.791 4-4 4-1.202 0-38.798 0-40 0-2.209 0-4-1.791-4-4 0-2.209 1.791-4 4-4C17.202 16 54.798 16 56 16z"/></svg></li></a>    
+                <button class="GIT hide">
+                    Change mode
+                </button>
+            </div>
+            <div id="side">
+                <ul class="side">
+                    <a href = "#"><li style="list-style-type: none;" id="close"><svg fill="#FD7E14" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 24 24" width="24px" height="24px"><path d="M 12 0 C 5.371094 0 0 5.371094 0 12 C 0 18.628906 5.371094 24 12 24 C 18.628906 24 24 18.628906 24 12 C 24 5.371094 18.628906 0 12 0 Z M 17.390625 15.429688 L 15.429688 17.390625 L 12 13.960938 L 8.570313 17.390625 L 6.609375 15.429688 L 10.039063 12 L 6.609375 8.570313 L 8.570313 6.609375 L 12 10.039063 L 15.429688 6.609375 L 17.390625 8.570313 L 13.960938 12 Z"/></svg></li></a>
+                    <a href = "index.html"><li>Home</li></a>
+                    <a href = "about.html"><li>About</li></a>
+                    <a href = "shop.html"><li>Shop</li></a>
+                    <a href = "blog.html"><li>Blog</li></a>
+                    <button class="GITE" style="padding: 3%;">
+                        Change mode
+                    </button>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <main class="pagemain">
+        <section>
+            <div style="background-image: url(https://www.thepinnaclelist.com/wp-content/uploads/2019/12/02-160-Leroy-160-Leroy-Street-New-York-NY-USA.jpg); background-size: cover; background-repeat: no-repeat; text-align: center;">
+                <br><h1>
+                    We are ROOT
+                </h1>
+                <p>
+                        Find the perfect condo for all your aesthetic needs Lorem ipsum dolor sit.
+                </p>
+                <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet. 
+                </p><br>
+                <div style="display: flex; gap: 3%; justify-content: center;">
+                        <button>Find your Condo</button>
+                        <button>Get free consultation</button>
+                </div><br>
+            </div>
+        </section>
+        <section>
+            <h1>
+                Wide selection
+            </h1>
+            <p><b>ROOT</b> has answers to all your condominium needs. We provide a wide selection of condos for any aesthetic.</p>
+            <p>Do you want the hustle and bustle of city life? Take a look at the <a href="shop.html">city condos</a>. Or do you like to spend your days swimming and relaxing by the lakes then look through our <a href="shop.html">lake condos</a>.</p>
+            <p>Find your perfect life with nature in our selection of <a href="shop.html">woods condos</a>. Prefer a calm and quiet life? You might like our <a href="shop.html">suburban condos</a>.</p><br>
+            
+            <h3 style="text-align: center;">We will help you find the house of your wildest imaginations</h3><br>
+
+            <div class="condos">
+                <div class="condo">
+                    <img src="https://www.shutterstock.com/image-photo/new-modern-block-flats-green-600nw-2437363335.jpg" id="city">
+                </div>
+                <div class="condo">
+                    <img src="https://cdn.fazwaz.com/wbr/smB_jE4v_IJix33vVZLe2s6C-yo/1125x1050/project/10384/north-8-chiangmai-condo-mueang-chiang-mai-5b44624da12eda0882004b54-full.jpg" id="lake">
+                </div>
+                <div class="condo">
+                    <img src="https://stacked-editorial.sgp1.digitaloceanspaces.com/editorial/wp-content/uploads/2021/12/15142849/Maplewoods-Condo-walking-path-1.jpg" id="woods">
+                </div>
+                <div class="condo">
+                    <img src="https://cdn.vox-cdn.com/thumbor/vrzypSywo-jGs7Xf0takoDaMnuA=/0x0:3072x2048/1200x800/filters:focal(1201x1087:1691x1577)/cdn.vox-cdn.com/uploads/chorus_image/image/54785585/shutterstock_138947078.0.jpg" id="Suburb">
+                </div>
+            </div>
+        </section>
+        <section>
+            <h1>
+                Our Values
+            </h1>
+            <ol>
+                <li>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quod, quibusdam. Delectus ipsa asperiores dolorum id quisquam dolores earum.</li> 
+                <li>Sunt itaque est accusantium illo neque nihil omnis quod consectetur modi quam.</li>
+                <li>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</li>
+                <li>Quod, quibusdam. Delectus ipsa asperiores dolorum id quisquam dolores earum. 
+                Sunt itaque est accusantium illo neque nihil omnis quod consectetur modi quam.
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit.</li> 
+                <li>Quod, quibusdam. Delectus ipsa asperiores dolorum id quisquam dolores earum. 
+                Sunt itaque est accusantium illo neque nihil omnis quod consectetur modi quam.</li>
+            </ol>
+            <h1>
+                Hear from our buyers
+            </h1>
+            <div class="scroll">
+                <div  class="reviews reviews2">
+                    <img src="https://img.wattpad.com/5a90a635c1e00d1b331f4fb626c4cf8ca2921cc1/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f776174747061642d6d656469612d736572766963652f53746f7279496d6167652f6376527752566630386b513244673d3d2d3430363434353836372e313462623337643937623064616561323633313337393534383533352e706e67" id="reviews">
+                    <label>Great!</label>
+                </div>
+                <div  class="reviews reviews3">
+                    <img src="https://m.media-amazon.com/images/M/MV5BZjM4NWVjNjItOTc0Yi00YTg0LWJjZDUtNjQ4ZGM5MzY4NWU4XkEyXkFqcGdeQXVyMTU1NTM2Mjg2._V1_.jpg" id="reviews">
+                    <label>Love the customer service</label>
+                </div>
+                <div  class="reviews reviews4">
+                    <img src="https://cfm.yidio.com/images/tv/2318/213350/episode-image-400x225.jpg" id="reviews">
+                    <label>sick condos!</label>
+                </div>
+                <div  class="reviews reviews5">
+                    <img src="https://m.media-amazon.com/images/M/MV5BNjI2NThkNzQtOTZjMi00NWIwLWI4NDgtYzdiNTMyMTg0Mjc5XkEyXkFqcGdeQXVyMTU1NTM2Mjg2._V1_.jpg" id="reviews">
+                    <label>I found my dream condo</label>
+                </div>
+                <div  class="reviews reviews6">
+                    <img src="https://i.ytimg.com/vi/C-UQb8H06lE/maxresdefault.jpg" id="reviews">
+                    <label>They helped me live my dream life</label>
+                </div>
+                <div  class="reviews reviews7">
+                    <img src="https://img.wattpad.com/f497d00a5ed94a57ab0f4f09af46835eb78f589a/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f776174747061642d6d656469612d736572766963652f53746f7279496d6167652f6678766c6d48494c776451425f413d3d2d3430363434393538392e3134626233393966633431353131373733363139363433383132332e706e67" id="reviews">
+                    <label>Couldnt ask for more</label>
+                </div>                                                                                                                                              
+            </div>
+        </section>
+    </main>
+    <footer class="pagefooter">
+        <div class="up">
+            <div class="in">
+                <h3>Sponsored by:</h3>
+                <ul style = "list-style-type: none;">
+                    <li>Git</li>
+                    <li>Bitcoin</li>
+                    <li>Dancerev</li>
+                    <li>Nickelbones</li>
+                </ul>
+            </div>
+            <div class="in">
+                <h3>Contact Us:</h3>
+                <ul style = "list-style-type: none;">
+                    <li>Call</li>
+                    <li>Email</li>
+                    <li>Newsletter</li>
+                </ul>
+            </div>
+            <div class="in">
+                <h3>Follow us:</h3>
+                <ul style = "list-style-type: none;">
+                    <li>Tiktok</li>
+                    <li>Youtube</li>
+                    <a href="https://pin.it/1aNo0vyJY"><li>Pinterest</li></a>
+                    <li>Instagram</li>
+                </ul>
+            </div>
+            <div class="in">
+                <h3>Support us:</h3>
+                <ul style = "list-style-type: none;">
+                    <li>Shop</li>
+                    <li>Donate</li>
+                    <li>Read blog</li>
+                </ul>
+            </div>
+        </div>
+        <div class="down">
+            <div class="dw" style="align-content: center;">
+                <a href="index.html"><h3>ROOT</h3></a>
+            </div>
+            <div class="dw">
+                <h3>Hosting:</h3>
+                <p>Github</p>
+            </div>
+            <div class="dw">
+                <h3>Designed:</h3>
+                <a href="https://github.com/Lingaombe?tab=repositories"><p>hanmngoli</p></a>
+            </div>
+        </div>
+        <p>© 2005-2024 Root condo distributors. Root offers wide selection of condos.</p>
+    </footer>
+  </body>
+  <script>
+    const mod = document.querySelector(".GIT");
+const mode = document.querySelector(".GITE");
+let count = 0;
+
+mod.onclick = function(){
+    count++;
+    if(count % 2 == 1){
+        document.body.style.background = "black";
+        document.body.style.color = "white";
+    }
+    else{
+        document.body.style.background = "white";
+        document.body.style.color = "black";
+    }
+}
+
+mode.onclick = function(){
+    count++;
+    if(count % 2 == 1){
+        document.body.style.background = "black";
+        document.body.style.color = "white";
+    }
+    else{
+        document.body.style.background = "white";
+        document.body.style.color = "black";
+    }
+}
+
+const remove = document.querySelector(".side");
+const closed = document.getElementById("close");
+const opened = document.getElementById("open");
+
+closed.addEventListener('click', () => {
+    remove.style.display = 'none';
+    console.log("clicked")
+})
+
+opened.addEventListener('click', () => {
+    remove.style.display = 'flex';
+    console.log("clicked")
+})
+
+addEventListener('load', () => {
+    remove.style.display = 'none';
+    console.log("loaded")
+})
+  </script>
+</html>
