@@ -1,0 +1,204 @@
+.page{
+    display: grid;
+    font-family: 'Bodoni MT';
+}
+.pre{
+    font-family: 'Bodoni MT';
+    text-align: justify;
+    margin: auto;
+    max-width: 500px;
+}
+h1{
+    font-size: 5em;
+    font-style: italic;
+}
+h3{
+    text-align: center; 
+    font-size: 2em; 
+    font-style: oblique;
+}
+.nav{
+    display: flex;
+    float: left;
+    gap: 10px;
+    text-align: center;
+    padding-bottom: 10px;
+    padding-top: 10px;
+}
+.bar{
+    max-width: 30px;
+    margin: auto;
+    display: flex;
+    gap: 20px;
+    float: left;
+}
+.one{
+    display: grid;
+    grid-template-columns: 50% 45%;
+}
+#icon{
+    max-width: 30px;
+    margin: auto;
+    border-radius: 10px;
+}
+#icon:hover{
+    transform: scale3d(1.5,1.5,1.5);
+    box-shadow: 1px 1px 1px 1px rgb(188, 253, 188); 
+}
+button{
+    padding: 5px;
+    background: #1DB954;
+    border: 2px solid #1DB954;
+    border-radius: 80px;
+    font-family: 'Bodoni MT';
+    font-size: 1em;
+    font-style: oblique;
+    box-shadow: 2px 3px #005d21;   
+}
+button:hover{
+    background: green;
+    font-style: italic;
+    border: 2px solid #14823b;
+    border-radius: 40px;
+    box-shadow: 2px 3px #003111;
+    transform: scale3d(1.1,1.1,1.1);
+    cursor: grab;
+}
+.info{
+    margin: auto;
+}
+.scroll{
+    display: flex;
+    max-width: 500px;
+    min-height: 100px;
+    gap: 40px;
+    overflow: hidden;
+    padding: 20px;
+    position: relative;
+    margin: auto;
+}
+@keyframes scroll-left{
+    to{
+        left: -150px;
+    }
+}
+.scroll .reviews{
+    max-width: 150px;
+    margin: auto;
+    position: absolute;
+    left: max(calc(100px * 8), 100%);
+    animation-name: scroll-left;
+    animation-duration: 30s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    mask-image: linear-gradient(
+        to right,
+        rgba(0,0,0,0),
+        rgba(0,0,0,1) 20%,
+        rgba(0,0,0,1) 80%,
+        rgba(0,0,0,0),
+    );
+
+}
+#reviews{
+    max-width: 150px;
+    max-height: 85px;
+}
+#reviews:hover{
+    transform: scale3d(1.1,1.1,1.1);
+    box-shadow: 2px 3px 3px 2px rgb(188, 253, 188); 
+    border-radius: 10px;;
+}
+.btncontainer{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    gap: 20px;
+}
+.uno{
+    background-image: url("https://www.surfertoday.com/images/stories/dreamywave.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 550px;
+    text-align: center;
+}
+
+.reviews2{
+    animation-delay: calc(20s / 20 * (20 - 5) * -1);
+}
+.reviews3{
+    animation-delay: calc(20s / 20 * (20 - 10) * (-1));
+}
+.reviews4{
+    animation-delay: calc(20s / 20 * (20 - 15) * (-1));
+}
+.reviews5{
+    animation-delay: calc(20s / 20 * (20 - 20) * (-1));
+}
+.reviews6{
+    animation-delay: calc(20s / 20 * (20 - 25) * (-1));
+}
+.reviews7{
+    animation-delay: calc(20s / 20 * (20) * (-1));
+}
+.columns{
+    display: grid;
+    grid-template-columns: 85% 12%;
+    gap: 20px;
+    text-align: center;
+}
+.sum{
+    display: grid;
+    grid-template-columns: 50% 45%;
+    text-align: center;
+    margin: auto;
+    gap: 50px;
+}
+.pr{
+    font-family: 'Bodoni MT';
+    min-width: 500px;
+    border-radius: 40px;
+    border: 1px inset transparent;
+    margin: 10px;
+    box-shadow:  5px 5px 5px 5px rgb(87, 103, 87);
+}
+.side{
+    border: 1px inset transparent;
+    margin-top: 80px;
+    box-shadow:  5px 5px 5px 5px rgb(87, 103, 87);
+    border-radius: 40px;
+    max-height: 535px;
+}
+.search{
+    max-width: 90px;
+    border-radius: 40px;
+    padding: 15px;
+    margin-bottom: 30px;
+    font-family: 'Bodoni MT';
+    font-size: 1em;
+    font-style: oblique;
+}
+.conta{
+    min-width: 300px;
+    padding: 10px;
+    margin: 6px;
+    border-radius: 40px;
+    font-family: 'Bodoni MT';
+    font-size: 1em;
+    font-style: oblique;
+}
+.contact{
+    display: flex;
+    justify-content: space-around;
+}
+.cont{
+    border: 1px inset transparent;
+    box-shadow:  2px 2px 2px 2px rgb(75, 111, 75);
+    border-radius: 40px;
+    min-width: 400px;
+    text-align: center;
+    min-height: 550px;
+}
+#cont{
+    max-width: 200px;
+    max-height: 200px;
+}
