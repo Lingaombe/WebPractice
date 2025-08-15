@@ -14,8 +14,8 @@ nav{
     -webkit-backdrop-filter: blur(8.6px);
 }
 
-nav .a{
-    cursor: pointer;
+a:hover{
+    transform: rotateZ('45deg');
 }
 
 .contact{}
@@ -24,4 +24,18 @@ nav .a{
 
 .work{}
 
-.skills{}
+.skills ul li{
+    list-style: none;
+    display: inline-block;
+    padding: 5px;
+    margin: 5px;
+    border: 1px solid #aff5ae;
+    border-radius: 10px;
+}
+.skills ul li:hover{
+    transition: background-color 1s ease, transform 0.5s ease-in-out, color 0.5s ease;
+    background-color: #aff5ae;
+    color: white;
+    transform: scale3d(1.1, 1.1, 1.1);
+    cursor: pointer;
+}
