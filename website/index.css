@@ -1,0 +1,23 @@
+body{
+    font-family: 'Comic Sans MS';
+}
+
+nav{
+    padding: 5px;
+    place-items: center;
+    position: sticky;
+    top: 0;
+    overflow: hidden;
+}
+
+nav .a{
+    cursor: pointer;
+}
+
+.contact{}
+
+.intro{}
+
+.work{}
+
+.skills{}
