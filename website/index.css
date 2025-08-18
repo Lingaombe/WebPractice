@@ -20,7 +20,7 @@ nav{
     -webkit-backdrop-filter: blur(8.6px);
     border-bottom: 2px solid #aff5ae;
     display: flex;
-    place-content: center;
+    align-items: center;
     gap: 10px;
 }
 
@@ -39,7 +39,7 @@ ul{
     padding: 0;
 }
 .intro{
-    min-height: 200px;
+    min-height: 230px;
 }
 .intro img{
     border-radius: 50%;
@@ -48,7 +48,9 @@ ul{
     shape-outside: circle(50%);
 }
 
-.work{}
+.work{
+    display: flow-root;
+}
 
 .skills ul li{
     display: inline-block;
