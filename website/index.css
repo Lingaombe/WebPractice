@@ -1,17 +1,21 @@
 body{
     font-family: 'Comic Sans MS';
     margin: 3px;
-}
-
-.dark{
     background-color: #1a1a1a;
     color: #f0f0f0;
 }
+h2{
+    text-align: center;;
+}
+/* .dark{
+    background-color: #1a1a1a;
+    color: #f0f0f0;
+} */
 
 nav{
     background-color: #d3e6d367;
     border-radius: 10px;
-    place-items: center;
+    padding: 10px;
     position: sticky;
     top: 0;
     overflow: hidden;
@@ -25,14 +29,12 @@ nav img:hover{
     transform: translateY(-5px);
 }
 
-#mode{
-    top: 0;
-    right: 0;
-    padding: 10px;
-    position: fixed;
-    border: transparent;
-    background: transparent;
+ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
 }
+
 
 .intro img{
     border-radius: 50%;
@@ -42,7 +44,6 @@ nav img:hover{
 .work{}
 
 .skills ul li{
-    list-style: none;
     display: inline-block;
     padding: 5px;
     margin: 5px;
