@@ -34,7 +34,9 @@ nav img:hover{
     background: transparent;
 }
 
-.intro{}
+.intro img{
+    border-radius: 50%;
+}
 
 .work{}
 
