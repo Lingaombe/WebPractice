@@ -36,6 +36,7 @@ nav img:hover{
 
 .intro img{
     border-radius: 50%;
+    width: 150px;
 }
 
 .work{}
@@ -58,8 +59,10 @@ nav img:hover{
 }
 
 footer{
-    position: fixed;
+    position: sticky;
     bottom: 0;
+    right: 0;
+    height: 50px;
     width: 100%;
     background-color: #aff5ae67;
     box-shadow: 0 -4px 30px rgba(209, 120, 120, 0.1);
