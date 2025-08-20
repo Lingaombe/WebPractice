@@ -8,17 +8,14 @@ body{
 h1{
     margin: 0;
 }
-h2{
-    padding: 10px;
-}
+
 nav{
-    color: #b2ffb2;
     padding: 20px;
     position: sticky;
     top: 0;
     backdrop-filter: blur(8.6px);
     -webkit-backdrop-filter: blur(8.6px);
-    border-bottom: 2px solid #aff5ae;
+    border-bottom: 2px solid gold;
     display: flex;
     align-items: center;
     gap: 10px;
@@ -28,49 +25,54 @@ nav img{
     padding: 0px 1px;
 }
 
-nav img:hover{
+img:hover{
     transition: transform 0.5s ease-in-out;
     transform: translateY(-5px);
 }
 
-ul{
+ul, li{
     list-style-type: none;
     margin: 0;
     padding: 0;
 }
-.intro{
-    min-height: 230px;
-}
-.intro img{
-    border-radius: 50%;
-    width: 150px;
-    float: left;
-    shape-outside: circle(50%);
+
+/* background shorthand
+background-color background-image background-position background-size 
+background-repeat background-origin background-clip background-attachment */
+
+.hero{
+    background: url('han.jpeg') no-repeat center;
+    background-size: cover;
+    height: 250px;
 }
 
-.work{
-    display: flow-root;
+.work a{
+    display: flex;
+    float: right;
+    padding: 10px;
 }
 
 .skills ul li{
     display: inline-block;
     padding: 5px;
     margin: 5px;
-    border: 1px solid #aff5ae;
+    border: 1px solid gold;
     border-radius: 10px;
     font-weight: bold;
 }
 .skills ul li:hover{
-    transition: background-color 1s ease, transform 0.5s ease-in-out, 
+    transition: transform 0.5s ease-in-out, 
     color 0.5s ease;
-    background-color: #7daa7c;
     transform: scale3d(1.1, 1.1, 1.1);
     cursor: pointer;
 }
 
 footer{
-    position: fixed;
     bottom: 0;
+    display: flex;
+    float: left;
+    align-items: center;
+    gap: 10px;
 }
 
 @media (min-width: 600px) {
