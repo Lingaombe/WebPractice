@@ -1,0 +1,65 @@
+body{
+    background: linear-gradient(to right, rgb(112, 160, 175),rgb(160, 193, 185));
+    text-align: center;
+}
+img{
+    max-width: 150px;
+    border-radius: 30px;
+}
+.container{
+    row-gap: 10px;
+    padding-top: 10px;
+    margin: auto;
+} 
+.first{
+    display: flex;
+    gap: 50px;
+    position: relative;
+    border-radius: 20px;
+}
+.second{
+    padding-top: 50px;
+    display: flex;
+    gap: 50px;
+    position: relative;
+    border-radius: 20px;
+}
+figcaption{
+    position: relative;
+    padding: 10px;
+    text-align: center;
+    font-size: 1.5em;
+}
+
+.icon{
+    border: groove whitesmoke;
+    border-radius: 20px;
+}
+.icon:hover{
+    background: white;
+    animation: transform  1s ease-out;
+    cursor: pointer;
+    transform: scale3d(1.1,1.1,1.1);
+}
+@keyframes transform{
+    from{transform: scale3d(1,1,1);}
+    to{transform: scale3d(1.1,1.1,1.1);}
+}
+.slide{
+    max-width: 20%;
+    display: inline-block;
+    border: 3px outset;
+}
+#slide{
+    max-width: 20%;
+    float: left;
+}
+label{
+   position: relative;
+   float: right;
+   cursor: pointer;
+}
+.slide:hover{
+    cursor: pointer;
+    border: inset;
+}

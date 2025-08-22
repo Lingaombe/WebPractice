@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            toggle
+        </title>
+        <style>
+            .main{
+                display: flex;
+            }
+            #switch{
+                visibility: hidden;
+            }
+            label{
+                cursor: pointer;
+                text-indent: -200px;
+                width: 400px;
+                height: 200px;
+                background: wheat;
+                border-radius: 200px;
+                position: relative;
+            }
+            label::after{
+                content: '';
+                position: absolute;
+                top: 10px;
+                left: 10px;
+                width: 180px;
+                height: 180px;
+                background: orange;
+                border-radius: 90px;
+                transition: .4s;
+            }
+            input:checked + label{
+                background: gray;
+            }
+            input:checked + label:after{
+                left: calc(100% - 5px);
+                transform: translateX(-100%)
+            }
+        </style>
+    </head>
+    <body>
+        <div class="main">
+            <input id="switch" type="checkbox">
+            <label for="switch">toggle</label>
+        </div>
+        <p>
+            working of dark and light modes
+        </p>
+    </body>
+    <script>
+        let mode = document.getElementById("switch");
+        let element = document.body;
+
+        mode.addEventListener('click', () => {
+            if(mode.checked){
+                document.body.style.background = 'black';
+                element.style.color = 'white';
+            }
+            else{
+                element.style.background = 'white';
+                element.style.color = 'black';
+            }
+        })
+    </script>
+</html>

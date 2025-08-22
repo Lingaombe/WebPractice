@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            button
+        </title>
+    </head>
+    <body>
+        <div id="form">
+            <form>
+                <h1>Fill in</h1>
+                <input id="name" type="text" placeholder="name"><br>
+                <input id="pass" type="password" placeholder="password"><br>
+                <input id="passre" type="password" placeholder="retype password"><br>
+                <input type="radio" id="gender" name="gender">
+                <label for="gender">Male</label>
+                <input type="radio" id="gender" name="gender">
+                <label for="gender">Female</label>
+                <input type="radio" id="gender" name="gender">
+                <label for="gender">Other</label><br>
+                <input id="date" type="date"><br>
+                <button id="btn" onclick="clicked()"><b>Submit</button>
+                </form><br>
+            <p id="p"></p>
+        </div>    
+    </body>
+    <style>
+        body{
+            background: linear-gradient(to right, rgb(82, 128, 245), rgb(63, 166, 159));
+            text-align: center;
+            font-size: 1em;
+            font-family: monospace;
+            font-style: oblique;
+        }
+        div{
+            background: radial-gradient(rgb(197, 68, 150), rgb(106, 0, 255));
+            max-width: fit-content;
+            margin: auto;
+            border-radius: 20%
+        }
+        button{
+            background: linear-gradient(to left, rgb(82, 128, 245), rgb(63, 166, 159));
+            padding: 5px;
+            font-family: Arial;
+            font-style: italic;
+            font-size: 1.5em;
+        }
+        button:hover{
+            background: rgb(3, 150, 3);
+
+        }
+        input{
+            padding:5px;
+            background: transparent;
+            
+            color:rgb(15, 0, 1);
+            font-size: 2em;
+            font-family: 'Times New Roman';
+            border: none;
+            text-decoration: dotted;
+        }
+    </style>
+    <script>
+        const name = document.getElementById("name");
+        const passw = document.getElementById("pass");
+        const passre = document.getElementById("passre");
+        const p = document.getElementById("p");
+        let password = passw.value;
+        let checkr = passre.value;
+
+        function clicked(){
+           p.textContent = password;
+        }
+    </script>
+</html>

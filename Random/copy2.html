@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            copy
+        </title>
+    </head>
+    <body>
+        <h1>Under Construction Page</h1>
+        <h6>
+            SITE NEARLY READY
+        </h6>
+        <div class="load">
+
+        </div>
+        <br>
+        <button>Notify Me!</button>
+        <br>
+        <div class="socials">
+            <span id="fb">
+                <img src="https://cdn0.iconfinder.com/data/icons/socials-3/750/Facebook-1024.png">
+            </span>
+            <span id="whats">
+                <img src="https://cdn0.iconfinder.com/data/icons/socials-3/750/Whatsapp-1024.png">
+            </span>
+            <span id="pin">
+                <img src="https://cdn0.iconfinder.com/data/icons/socials-3/750/Pinterest-1024.png">
+            </span>
+            <span id="insta">
+                <img src="https://cdn0.iconfinder.com/data/icons/socials-3/750/Instagram-1024.png">
+            </span>
+        </span>
+    </body>
+    <style>
+        body{
+            background-image: url("https://www.google.com/imgres?q=image&imgurl=https%3A%2F%2Fletsenhance.io%2Fstatic%2F8f5e523ee6b2479e26ecc91b9c25261e%2F1015f%2FMainAfter.jpg&imgrefurl=https%3A%2F%2Fletsenhance.io%2F&docid=-t22bY2ix3gHaM&tbnid=tYmxDgFq4MrkJM&vet=12ahUKEwjyqYP7m92GAxUryqACHQlcC3AQM3oECBMQAA..i&w=1280&h=720&hcb=2&itg=1&ved=2ahUKEwjyqYP7m92GAxUryqACHQlcC3AQM3oECBMQAA");
+            font-family:'Times New Roman';
+            font-size: 1.5em;
+            text-align: center;
+        }
+        h1{
+            font-size: 3em;
+        }
+        h6{
+            font-size: 1em;
+        }
+        button{
+            background: black;
+            color: white;
+            font-family: 'Times New Roman';
+            font-size: 1em;
+            padding-right: 5%;
+            padding-left: 5%;
+            padding-top: 2%;
+            padding-bottom: 2%;
+        }
+        button:hover{
+            background: white;
+            color: black;
+            cursor: help;
+        }
+        span{
+            max-width: 500px;
+        }
+        .socials{
+            margin: auto;
+            display: flex;
+            float: left;
+            padding: 10px;
+            gap: 20px;
+        }
+        img{
+            max-width: 20%;
+            border: solid;
+            border-radius: 50%;
+        }
+        img:hover{
+            animation: hannah 1s;
+            transform:scale3d(1.1,1.1,1.1);
+            background: rgb(135, 135, 216);
+            border: inset;
+            cursor: pointer;
+        }
+        @keyframes hannah{
+            from{transform: scale3d(1,1,1);}
+            to{transform: scale3d(1.1,1.1,1.1);}
+        }
+    </style>
+    <script>
+        const fb = document.getElementById("fb");
+        const what = document.getElementById("whats");
+        const pin = document.getElementById("pin");
+        const insta = document.getElementById("insta");
+
+        fb.onclick = function(){
+            window.open("https://www.facebook.com/");
+        }
+        insta.onclick = function(){
+            window.open("https://www.instagram.com/");
+        }
+        pin.onclick = function(){
+            window.open("https://in.pinterest.com/homefeed/","_blank");
+        }
+        what.onclick = function(){
+            window.open("https://www.whatsapp.com/","_blank");
+        }
+    </script>
+</html>

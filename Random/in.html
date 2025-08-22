@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Hie
+        </title>
+    </head>
+    <body>
+        <button id="button">Click me</button>
+        <p id="pa"></p>
+    </body>
+    <style>
+        body{
+            background: linear-gradient(to right, rgb(178, 127, 241), rgb(192, 242, 131));
+            text-align: center;
+            font-family: 'Times New Roman';
+            font-style: oblique;
+            font-size: 2em;
+        }
+        button{
+            background: rgb(178, 127, 241);
+            padding: 12px;
+            margin: auto;
+            font-family: 'Times New Roman';
+            font-style: oblique;
+            font-size: 1em;
+        }
+        button:hover{
+            background: rgb(192, 242, 131);
+            border-radius: 20% 15%;
+            transition: ease-in-out;
+            cursor: pointer;
+        }
+
+    </style>
+    <script>
+        const button = document.getElementById("button");
+        const pa = document.getElementById("pa");
+        button.onclick = function(){
+                const display = "what";
+                pa.textContent = display;
+        }
+    </script>
+</html>

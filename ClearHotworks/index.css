@@ -1,0 +1,97 @@
+body{
+    background: linear-gradient(to right, #09C6F9, #045DE9);
+    font-family:'Gill Sans', 'Gill Sans MT', 'Calibri', 'Trebuchet MS', sans-serif
+}
+.icon{
+    max-width: 50%;
+    border-radius: 6%;
+}
+.navigation{
+    margin-left: auto;
+    display: grid;
+    grid-template-columns: 25%;
+    padding-bottom: 10px;
+    text-align: center;
+}  
+.socials{
+    display: flex;
+    float: left;
+    max-width: 15%;
+    border-radius: 20px;
+    padding: 1%;
+}
+.socials:hover{
+    background: white;
+    animation: transform  1s ease-out;
+    cursor: pointer;
+    transform: scale3d(1.1,1.1,1.1);
+}
+@keyframes transform{
+    from{transform: scale3d(1,1,1);}
+    to{transform: scale3d(1.1,1.1,1.1);}
+}
+.span{
+    display: flex;
+    float: left;
+    gap: 30px;
+}
+.synopsis{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    text-align: justify;
+    margin: auto;
+    padding: 100px;
+}
+#im{
+    border-radius: 10%;
+    max-height: fit-content;
+    max-width: 400px;
+    cursor: pointer;
+}
+.image{
+    border-radius: 50%;
+    max-width: 50%;
+    max-block-size: 200px;
+    align-content: center;
+    margin: auto;
+    outline: black;
+}
+button{
+    text-align: center;
+    background: #045DE9;
+    color: white;
+    padding: 10px;
+}
+button:hover{
+    background: #09C6F9;
+    cursor: pointer;
+}
+form{
+    background-image: url(bikes/c9.png);
+    background-repeat: no-repeat;
+    background-size:cover;
+    backdrop-filter: blur(15px);
+    text-align: center;
+    max-width: 50%;
+    height: 400px;
+    margin: auto;
+    padding-top: 100px;
+    border-radius: 50%;
+}
+input{
+    padding: 5px;
+    margin: 8px;
+    background: rgb(167, 194, 252);
+    border: 1px solid;
+    font-family:'Gill Sans', 'Gill Sans MT', 'Calibri', 'Trebuchet MS', sans-serif;
+}
+.wrapper{
+    display: grid;
+    grid-template-columns: 25% 75%;
+    column-gap: 30px;
+}
+.click{
+    border: 2px inset purple;
+    border-radius: 80px;
+    background: #045DE9;
+}

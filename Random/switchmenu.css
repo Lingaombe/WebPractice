@@ -1,0 +1,62 @@
+body{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    font-size: 1.3rem;
+    background-image: url("/icons/hair.png");
+    background-size: cover;
+    color: plum;
+}
+form input{
+    padding: 0.5rem;
+    font-weight: bold;
+    font-family: 'Times New Roman';
+    border-radius: 8px;
+    margin-bottom: 8px;
+    min-width: 20vw;
+    border: transparent;
+}
+button{
+    padding: 0.3rem;
+    border-radius: 8px;
+    margin: 8px;
+    font-style: italic;
+    font-display: condensed;
+    font-family: 'Bodoni MT';
+    font-size: 1rem;
+}
+.active{
+    animation: phase .2s ease-in-out;
+    color: transparent;
+    background-color: transparent;
+    border: transparent;
+}
+@keyframes phase{
+    from{}
+    to{
+        color: transparent;
+    }
+}
+pre{
+    padding: 0.5rem;
+    font-style: italic;
+    font-display: condensed;
+    font-family: 'Bodoni MT';
+    border-radius: 8px;
+    margin-bottom: 8px;
+    align-items: center;
+    align-content: center;
+}
+.menu{
+    display: flex;
+    align-items: center;
+    text-align: center;
+    margin: auto;
+    gap: 10%;
+    background-image: transparent;
+}
+.submenu{
+    min-width: 20vw;
+    text-align: center;
+    margin-top: 30px;
+}

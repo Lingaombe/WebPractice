@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>
+        Hamburger menu
+    </title>
+</head>
+<body>
+    <div class="offscreenmenu">
+        <ul style="list-style-type: none;">
+            <li>
+                main
+            </li>
+            <li>
+                shop
+            </li>
+            <li>
+                blog
+            </li>
+        </ul>
+    </div>
+
+    <nav>
+        <div class="hammenu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+</body>
+<style>
+    .offscreenmenu{
+        background-color: black;
+        height: 10vh;
+        width: 40%;
+        max-width: 450px;
+        position: fixed;
+        top: 0;
+        right: -450px;
+        font-size: 2rem;
+        transition: .3s ease;
+        gap: 1%;
+        color: orange;
+        font-family: 'Bodoni MT';
+        font-stretch: condensed;
+    }
+    .offscreenmenu.anctive{
+        right: 0;
+        height: 50vh;
+        margin-top: 1.1%;
+        margin-right: 0.75%;
+    }
+    nav{
+        padding: 1rem;
+        display: flex;
+        background-color: black;
+    }
+    .hammenu{
+        height: 50px;
+        width: 50px;
+        margin-left: auto;
+        position: relative;
+    }
+    .hammenu span{
+        height: 8px;
+        width: 100%;
+        background-color: orange;
+        position: absolute;
+        border-radius: 25px;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        transition: .3s ease;
+    }
+    .hammenu span:nth-child(1){
+        top: 25%;
+    }
+    .hammenu span:nth-child(3){
+        top: 75%;
+    }
+    .hammenu.ative span:nth-child(1){
+        top: 50%;
+        transform: translate(-50%, -50%) rotate(45deg);
+    }
+    .hammenu.ative span:nth-child(2){
+        opacity: 0;
+        transition: .3s;
+    }
+    .hammenu.ative span:nth-child(3){
+        top: 50%;
+        transform: translate(-50%, -50%) rotate(-45deg);
+    }
+</style>
+<script>
+    const HamMenu = document.querySelector('.hammenu');
+    const offscreenmenu = document.querySelector('.offscreenmenu');
+
+    HamMenu.addEventListener('click', () => {
+        HamMenu.classList.toggle('ative');
+        offscreenmenu.classList.toggle('anctive');
+    })
+</script>
+</html>
