@@ -2,15 +2,15 @@ body{
     font-family: 'Comic Sans MS';
     font-size: 1.1rem;
     margin: 3px;
-    background-color: cornsilk;
-    color: #000;
+    background-color: #191f29;
+    color: white;
 }
 
 h1{
     margin: 0;
 }
 h3{
-    border-bottom: 1px solid gold;
+    border-bottom: 1px solid #F8C61E;
 }
 
 nav{
@@ -19,7 +19,7 @@ nav{
     top: 0;
     backdrop-filter: blur(8.6px);
     -webkit-backdrop-filter: blur(8.6px);
-    border-bottom: 2px solid gold;
+    border-bottom: 2px solid #F8C61E;
     display: flex;
     align-items: center;
     gap: 10px;
@@ -61,7 +61,6 @@ background-repeat background-origin background-clip background-attachment */
 
 .tech{
     font-size: 0.8rem;
-    color: #555;
     font-weight: bold;;
 }
 
@@ -69,7 +68,7 @@ background-repeat background-origin background-clip background-attachment */
     display: inline-block;
     margin: 0 5px 10px 0;
     padding: 5px;
-    border: 1px solid gold;
+    border: 1px solid #F8C61E;
     border-radius: 10px;
 }
 .skills ul li:hover{
